@@ -1,0 +1,104 @@
+@import "_styles";
+@import "_header";
+@import "_footer";
+
+// header 
+.header {
+    background: #1a1a1a;
+}
+
+// contact
+.contact {
+    &__title {
+        @extend %title;
+        padding: 170px 0 20px 0;
+        @media (max-width: 768px) {
+            padding: 150px 0 20px 0;
+        }
+    }
+    &__content {
+        background: linear-gradient(#fbfbfb, #fff);
+    }
+    &__subtitle {
+        color: white;
+        font-weight: 400;
+        font-size: 30px;
+        color: #1a1a1a;
+        text-align: center;
+        padding: 100px 0;
+    }
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__tel {
+        padding-bottom: 100px;
+    }
+    &__block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: -10px;
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+        & i {
+            font-size: 30px;
+        }
+        &-number {
+            font-weight: 400;
+            font-size: 20px;
+            color: #222222;
+            padding-left: 15px;
+        }
+    }
+}
+.form {
+    &__group {
+        position: relative;
+        border-bottom: 5px solid #1a1a1a;
+        width: 100%;
+        @media (min-width: 1091px) {
+            &:first-child {
+                margin-right: 50px;
+            }
+            &.-name, &.-surname {
+                max-width: 500px;
+            }
+        }
+        &.-message {
+            & textarea {
+                resize: none;
+            }
+        }
+        &:not(:last-child) {
+            margin-bottom: 70px;
+        }
+        &-input {
+            background: transparent;
+            width: 100%;
+            font-size: 20px;
+            color: #222222;
+            padding-bottom: 15px;
+            font-weight: 500;
+            &:focus ~ .form__group-label,
+            &:not(:placeholder-shown) ~ .form__group-label {
+                top: -27px;
+                transition: 0.3s;
+            } 
+        }
+        &-label {
+            transition: 0.3s;
+            top: 3px;
+            position: absolute;
+            left: 0;
+            font-weight: 400;
+            font-size: 17px;
+            color: #222222;
+            & span {
+                color: #FF2E2E;
+            }
+        }
+    }
+}
