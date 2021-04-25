@@ -342,6 +342,10 @@ img {
   background: #1a1a1a;
 }
 
+label {
+  cursor: text;
+}
+
 .contact__title {
   padding: 170px 0 20px 0;
 }

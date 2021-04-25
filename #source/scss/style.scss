@@ -6,7 +6,9 @@
 .header {
     background: #1a1a1a;
 }
-
+label {
+    cursor: text;
+}
 // contact
 .contact {
     &__title {
